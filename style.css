@@ -1,55 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://cdn.bhdw.net/im/snowy-mountain-and-forest-reflected-in-water-wallpaper-116467_w635.webp');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <nav>
-            <a href="index.html">Portfolio</a>
-            <a href="about-me.html">About Me</a>
-            <a href="about-site.html">About This Site</a>
-        </nav>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/originals/ed/c3/37/edc33755c16979ee479a0720d46f2c7c.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #E0FFE0; 
+}
 
-        <h1>About Me</h1>
-        
-        <div class="portfolio-item">
-            <h2>My name is Jordan and my last name will not be disclosed since this is public</h2>
-            <p>A little about me is that I'm decent at coding. This class was required however and I was forced to make this website :(</p>
-        </div>
-        
-        <div class="portfolio-item">
-            <h2>My Skills</h2>
-            <ul>
-                <li>Decent at gaming</li>
-                <li>Can Do a black diamond at Eagle Point snowboarding and Skiing resort</li>
-                <li>Ive worked for the past ninish months and have been there the entire time!</li>
-            </ul>
-        </div>
-        
-        <div class="portfolio-item">
-            <h2>Contact Information</h2>
-            <p>Email: your.26bruunjorl@washk12.org</p>
-            <p>Phone: (123) 435-680-6580</p>
-        </div>
 
-        <footer>
-            &copy; 2025 My Portfolio | All Rights Reserved
-        </footer>
-    </div>
-</body>
-</html>
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 20, 0, 0.85); 
+    min-height: 100vh;
+}
+
+
+nav {
+    background-color: rgba(0, 30, 0, 0.9);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+nav a {
+    color: #C8FFC8; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(200, 255, 200, 0.3); 
+    color: #FFFFFF; 
+}
+
+h1, h2 {
+    color: #B0FFB0; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in 0.2s forwards;
+}
+
+.portfolio-item {
+    background-color: rgba(0, 40, 0, 0.4); 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 3px solid #A0FFA0; 
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in forwards;
+}
+
+.portfolio-item p, .portfolio-item li {
+    color: #D0FFD0;
+}
+
+.portfolio-item:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.portfolio-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.portfolio-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 30, 0, 0.9);
+    color: #C0FFC0;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
