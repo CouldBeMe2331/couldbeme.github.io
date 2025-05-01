@@ -45,6 +45,8 @@
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 5px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
         }
         
         .footer {
@@ -53,42 +55,96 @@
             background-color: rgba(0, 0, 0, 0.8);
             margin-top: 30px;
         }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 20px;
+            background-color: white;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Transition effects */
+        .fade-out {
+            opacity: 0 !important;
+        }
     </style>
 </head>
 <body>
     <div class="page-content">
         <div class="nav-bar">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="about-me.html">About Me</a>
-            <a class="nav-link" href="about-site.html">About This Site</a>
+            <a class="nav-link" href="index.html" onclick="navigate(event)">Home</a>
+            <a class="nav-link" href="about-me.html" onclick="navigate(event)">About Me</a>
+            <a class="nav-link" href="about-site.html" onclick="navigate(event)">About This Site</a>
         </div>
         
-        <h1 style="text-align: center;">About Me</h1>
-        
-        <div class="info-box">
-            <h2>Who Am I?</h2>
-            <p>Hello! I'm [Your Name]. I love [your interests]. This website shows my work.</p>
-        </div>
-        
-        <div class="info-box">
-            <h2>My Skills</h2>
-            <p>Things I'm good at:</p>
-            <ul>
-                <li>First skill</li>
-                <li>Second skill</li>
-                <li>Third skill</li>
-            </ul>
-        </div>
-        
-        <div class="info-box">
-            <h2>My Story</h2>
-            <p>I started learning [your subject] in [year].</p>
-            <p>My favorite thing about it is [what you enjoy].</p>
+        <div id="content-area">
+            <h1 style="text-align: center;">About Me</h1>
+            
+            <div class="info-box">
+                <h2>Who Am I?</h2>
+                <p>Hello! I'm [Your Name]. I love [your interests]. This website shows my work.</p>
+            </div>
+            
+            <div class="info-box">
+                <h2>My Skills</h2>
+                <p>Things I'm good at:</p>
+                <ul>
+                    <li>First skill</li>
+                    <li>Second skill</li>
+                    <li>Third skill</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h2>My Story</h2>
+                <p>I started learning [your subject] in [year].</p>
+                <p>My favorite thing about it is [what you enjoy].</p>
+            </div>
         </div>
         
         <div class="footer">
             &copy; 2025 My Website
         </div>
     </div>
+
+    <script>
+        function navigate(event) {
+            event.preventDefault();
+            const targetUrl = event.target.getAttribute('href');
+            
+            const contentBoxes = document.querySelectorAll('.info-box, h1');
+            contentBoxes.forEach(box => {
+                box.classList.add('fade-out');
+            });
+            
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500);
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const contentBoxes = document.querySelectorAll('.info-box, h1');
+            let delay = 100;
+            
+            contentBoxes.forEach(box => {
+                box.style.opacity = '0';
+            });
+            
+            contentBoxes.forEach(box => {
+                setTimeout(() => {
+                    box.style.opacity = '1';
+                    box.style.transition = 'opacity 0.5s ease';
+                }, delay);
+                delay += 150;
+            });
+        });
+    </script>
 </body>
 </html>
