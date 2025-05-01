@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-        /* Same CSS as above */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -16,7 +15,6 @@
             background-position: center;
             color: white;
         }
-        /* ... rest of the same CSS ... */
     </style>
 </head>
 <body>
@@ -30,27 +28,27 @@
         <h1>About Me</h1>
         
         <div class="portfolio-item">
-            <h2>Who I Am</h2>
-            <p>Write a brief introduction about yourself here. Include your background, education, and interests.</p>
+            <h2>My name is Jordan and my last name will not be disclosed since this is public</h2>
+            <p>A little about me is that I'm decent at coding. This class was required however and I was forced to make this website :(</p>
         </div>
         
         <div class="portfolio-item">
             <h2>My Skills</h2>
             <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
+                <li>Decent at gaming</li>
+                <li>Can Do a black diamond at Eagle Point snowboarding and Skiing resort</li>
+                <li>Ive worked for the past ninish months and have been there the entire time!</li>
             </ul>
         </div>
         
         <div class="portfolio-item">
             <h2>Contact Information</h2>
-            <p>Email: your.email@example.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Email: your.26bruunjorl@washk12.org</p>
+            <p>Phone: (123) 435-680-6580</p>
         </div>
 
         <footer>
-            &copy; 2023 My Portfolio | All Rights Reserved
+            &copy; 2025 My Portfolio | All Rights Reserved
         </footer>
     </div>
 </body>
