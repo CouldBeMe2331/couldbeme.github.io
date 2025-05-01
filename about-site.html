@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>About This Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.pinimg.com/originals/ed/c3/37/edc33755c16979ee479a0720d46f2c7c.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .page-content {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .nav-bar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin-top: 30px;
+        }
+        
+        .featured-gif {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: block;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        
+        .fade-out {
+            opacity: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <div class="nav-bar">
+            <a class="nav-link" href="index.html" onclick="navigate(event)">Home</a>
+            <a class="nav-link" href="about-me.html" onclick="navigate(event)">About Me</a>
+            <a class="nav-link" href="about-site.html" onclick="navigate(event)">About This Site</a>
+        </div>
+        
+        <div id="content-area">
+            <h1 style="text-align: center;">About This Site</h1>
+            
+            <div class="info-box">
+                <h2>Why I Made This</h2>
+                <p>I created this website to showcase my coding journey and document my progress in web development. It serves as both a portfolio and a learning playground where I experiment with new techniques.</p>
+            </div>
+            
+            <img src="https://media.tenor.com/5xaEX_6_sP8AAAAM/croods-in-a-minute.gif" alt="Funny Croods GIF" class="featured-gif">
+        </div>
+        
+        <div class="footer">
+            &copy; 2025 My Website :3
+        </div>
+    </div>
+
+    <script>
+        function navigate(event) {
+            event.preventDefault();
+            const targetUrl = event.target.getAttribute('href');
+            
+            const contentElements = document.querySelectorAll('#content-area > *');
+            contentElements.forEach(element => {
+                element.classList.add('fade-out');
+            });
+            
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500);
+        }
+        
+        window.addEventListener('load', () => {
+            const contentElements = document.querySelectorAll('#content-area > *');
+            let delay = 100;
+            
+            contentElements.forEach(element => {
+                element.style.opacity = '0';
+            });
+            
+            contentElements.forEach(element => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                }, delay);
+                delay += 150;
+            });
+        });
+    </script>
+</body>
+</html>
