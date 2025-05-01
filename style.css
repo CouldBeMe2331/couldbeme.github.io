@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
 nav {
-    background-color: #6a0ae981;
+    background-color: #6f00ff81;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -17,5 +17,5 @@ nav a {
 }
 
 h1 {
-    color: #0112ff;
+    color: #0066ff;
 }
