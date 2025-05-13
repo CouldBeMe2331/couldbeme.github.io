@@ -16,3 +16,32 @@ Yeah super cool totally AI developed website as Ms. Heizer so believes since if 
 
 
 Yes. Looking at you MS heizer
+
+
+
+
+
+
+
+
+
+                  ___________________________________________                                                                  __________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                              ____________________________________________________________
